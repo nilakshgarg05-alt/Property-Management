@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="548.0" prefWidth="700.0"
+            style="-fx-background-color: #f4f7ff;"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="customer.FaceLoginController">
+
+    <children>
+
+        <!-- Top accent bar -->
+        <Rectangle layoutX="0" layoutY="0" width="700" height="5"
+                   fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+        <!-- White header panel -->
+        <Rectangle layoutX="0" layoutY="5" width="700" height="52"
+                   fill="#ffffff" />
+        <Rectangle layoutX="0" layoutY="56" width="700" height="2"
+                   fill="linear-gradient(to bottom, #d0ddf5, transparent)" />
+        <Label layoutX="230.0" layoutY="14.0" text="&#128269;  Face Recognition Login"
+               style="-fx-text-fill: #1a3a6e; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+
+        <!-- Status subtitle -->
+        <Label layoutX="200.0" layoutY="60.0" text="Looking for your face… Please look at the camera"
+               style="-fx-text-fill: #6b7a99; -fx-font-size: 11px; -fx-font-family: 'Segoe UI'; -fx-font-style: italic;"/>
+
+        <!-- Camera frame card -->
+        <Rectangle layoutX="20.0" layoutY="78.0" width="660.0" height="464.0" arcWidth="14" arcHeight="14"
+                   fill="#ffffff" />
+        <Rectangle layoutX="20.0" layoutY="78.0" width="660.0" height="4" arcWidth="14" arcHeight="14"
+                   fill="#1a6dd4" />
+
+        <!-- Status indicator line -->
+        <Rectangle layoutX="20.0" layoutY="82.0" width="660.0" height="2"
+                   fill="#e8f0ff" />
+
+        <!-- Camera view -->
+        <ImageView fx:id="cameraView"
+                   fitWidth="654"
+                   fitHeight="480"
+                   preserveRatio="true"
+                   layoutX="23"
+                   layoutY="82"/>
+
+        <!-- Bottom accent bar -->
+        <Rectangle layoutX="0" layoutY="543" width="700" height="5"
+                   fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+    </children>
+
+</AnchorPane>

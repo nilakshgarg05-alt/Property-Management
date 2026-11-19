@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="590.0" prefWidth="820.0"
+            style="-fx-background-color: #f4f7ff;"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="customer.listpropertycontroller">
+   <children>
+
+      <!-- Top accent bar -->
+      <Rectangle layoutX="0" layoutY="0" width="820" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+      <!-- White header panel -->
+      <Rectangle layoutX="0" layoutY="5" width="820" height="58"
+                 fill="#ffffff" />
+      <Rectangle layoutX="0" layoutY="62" width="820" height="2"
+                 fill="linear-gradient(to bottom, #d0ddf5, transparent)" />
+      <Label layoutX="298.0" layoutY="18.0" text="&#127968;  List The Property"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 20px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+
+      <!-- Search row card -->
+      <Rectangle layoutX="14.0" layoutY="72.0" width="792.0" height="56.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+      <Label layoutX="28.0" layoutY="83.0" text="MOBILE NO"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 9px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtmobile" layoutX="108.0" layoutY="82.0" prefHeight="36.0" prefWidth="185.0"
+                 promptText="Enter mobile"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+      <Button fx:id="btnsearch" layoutX="308.0" layoutY="82.0" mnemonicParsing="false" onAction="#dosearch"
+              text="&#128269;  Fetch" prefHeight="36.0" prefWidth="108.0"
+              style="-fx-background-color: #1a6dd4; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-family: 'Segoe UI'; -fx-background-radius: 8; -fx-cursor: hand; -fx-font-weight: bold;"/>
+      <Label layoutX="440.0" layoutY="83.0" text="LISTED PROPERTIES"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 9px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <ComboBox fx:id="listprop" layoutX="560.0" layoutY="82.0" onAction="#onlistprop" onMouseClicked="#clicklistprop"
+                prefWidth="210.0" prefHeight="36.0"
+                style="-fx-background-color: #f5f8ff; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8;"/>
+
+      <!-- Property Details Section -->
+      <Label layoutX="150.0" layoutY="144.0" text="Property Details"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Rectangle layoutX="292.0" layoutY="156.0" width="510.0" height="2" fill="#1a6dd430" />
+
+      <!-- Left photo panel -->
+      <Rectangle layoutX="14.0" layoutY="135.0" width="128.0" height="430.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+      <Rectangle layoutX="14.0" layoutY="135.0" width="128.0" height="4" arcWidth="12" arcHeight="12"
+                 fill="#0d9e5c" />
+      <Label layoutX="28.0" layoutY="148.0" text="Photo 1"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <StackPane layoutX="20.0" layoutY="165.0" prefHeight="160.0" prefWidth="116.0"
+                 style="-fx-background-color: #f0f4ff; -fx-border-color: #c5d5f5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8;">
+         <children>
+            <ImageView fx:id="prev2" fitHeight="150.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </StackPane>
+      <Button layoutX="24.0" layoutY="334.0" mnemonicParsing="false" onAction="#dobrowse1" text="&#128193;  Browse"
+              prefHeight="28.0" prefWidth="108.0"
+              style="-fx-background-color: #f0f4ff; -fx-text-fill: #1a6dd4; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-border-color: #1a6dd4; -fx-border-width: 1; -fx-border-radius: 6; -fx-background-radius: 6; -fx-cursor: hand;"/>
+
+      <Label layoutX="28.0" layoutY="376.0" text="Photo 2"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <StackPane layoutX="20.0" layoutY="392.0" prefHeight="110.0" prefWidth="116.0"
+                 style="-fx-background-color: #f0f4ff; -fx-border-color: #c5d5f5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8;">
+         <children>
+            <ImageView fx:id="prev1" fitHeight="100.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </StackPane>
+      <Button layoutX="24.0" layoutY="510.0" mnemonicParsing="false" onAction="#dobrowse2" text="&#128193;  Browse"
+              prefHeight="28.0" prefWidth="108.0"
+              style="-fx-background-color: #f0f4ff; -fx-text-fill: #1a6dd4; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-border-color: #1a6dd4; -fx-border-width: 1; -fx-border-radius: 6; -fx-background-radius: 6; -fx-cursor: hand;"/>
+
+      <!-- Main form card -->
+      <Rectangle layoutX="152.0" layoutY="163.0" width="660.0" height="400.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+
+      <!-- Action buttons on right inside card -->
+      <Button fx:id="btnsave" layoutX="626.0" layoutY="170.0" mnemonicParsing="false" onAction="#dosave"
+              text="List Now" prefWidth="172.0" prefHeight="36.0"
+              style="-fx-background-color: #0d9e5c; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 8; -fx-cursor: hand;"/>
+      <Button fx:id="btnupdate" layoutX="626.0" layoutY="216.0" mnemonicParsing="false" onAction="#doupdate"
+              text="Update Listing" prefWidth="172.0" prefHeight="36.0"
+              style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 8; -fx-cursor: hand;"/>
+      <Button fx:id="btnremove" layoutX="626.0" layoutY="262.0" mnemonicParsing="false" onAction="#doremove"
+              text="Remove Listing" prefWidth="172.0" prefHeight="36.0"
+              style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 8; -fx-cursor: hand;"/>
+
+      <!-- Plot Number -->
+      <Label layoutX="165.0" layoutY="175.0" text="Plot Number"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtpropno" layoutX="165.0" layoutY="192.0" prefHeight="34.0" prefWidth="125.0"
+                 promptText="Plot no"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Locality -->
+      <Label layoutX="306.0" layoutY="175.0" text="Locality"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtlocality" layoutX="306.0" layoutY="192.0" prefHeight="34.0" prefWidth="148.0"
+                 promptText="Locality"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- City -->
+      <Label layoutX="470.0" layoutY="175.0" text="City"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtcity" layoutX="470.0" layoutY="192.0" prefHeight="34.0" prefWidth="130.0"
+                 promptText="City"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Dimensions Section -->
+      <Label layoutX="165.0" layoutY="242.0" text="Dimensions"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Rectangle layoutX="270.0" layoutY="254.0" width="454.0" height="2" fill="#1a6dd430" />
+
+      <Label layoutX="165.0" layoutY="264.0" text="Total Area"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtarea" layoutX="165.0" layoutY="280.0" prefHeight="32.0" prefWidth="78.0"
+                 promptText="Area"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 7; -fx-background-radius: 7; -fx-font-family: 'Segoe UI'; -fx-font-size: 11px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <Label layoutX="255.0" layoutY="264.0" text="Left"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtleft" layoutX="255.0" layoutY="280.0" prefHeight="32.0" prefWidth="70.0"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 7; -fx-background-radius: 7; -fx-font-family: 'Segoe UI'; -fx-font-size: 11px;"/>
+
+      <Label layoutX="337.0" layoutY="264.0" text="Right"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtright" layoutX="337.0" layoutY="280.0" prefHeight="32.0" prefWidth="70.0"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 7; -fx-background-radius: 7; -fx-font-family: 'Segoe UI'; -fx-font-size: 11px;"/>
+
+      <Label layoutX="419.0" layoutY="264.0" text="Front"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtfront" layoutX="419.0" layoutY="280.0" prefHeight="32.0" prefWidth="70.0"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 7; -fx-background-radius: 7; -fx-font-family: 'Segoe UI'; -fx-font-size: 11px;"/>
+
+      <Label layoutX="500.0" layoutY="264.0" text="Rear"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtrear" layoutX="500.0" layoutY="280.0" prefHeight="32.0" prefWidth="70.0"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 7; -fx-background-radius: 7; -fx-font-family: 'Segoe UI'; -fx-font-size: 11px;"/>
+
+      <Label layoutX="580.0" layoutY="264.0" text="Direction"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtdirection" layoutX="580.0" layoutY="280.0" prefHeight="32.0" prefWidth="48.0"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 7; -fx-background-radius: 7; -fx-font-family: 'Segoe UI'; -fx-font-size: 11px;"/>
+
+      <!-- Type selection -->
+      <Label layoutX="165.0" layoutY="330.0" text="PROPERTY TYPE"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 9px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <RadioButton layoutX="165.0" layoutY="348.0" mnemonicParsing="false" text="Commercial"
+                   style="-fx-text-fill: #2d3748; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px;">
+         <toggleGroup><ToggleGroup fx:id="proptype" /></toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="282.0" layoutY="348.0" mnemonicParsing="false" text="Residential" toggleGroup="$proptype"
+                   style="-fx-text-fill: #2d3748; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px;"/>
+      <RadioButton layoutX="398.0" layoutY="348.0" mnemonicParsing="false" text="Agricultural" toggleGroup="$proptype"
+                   style="-fx-text-fill: #2d3748; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px;"/>
+
+      <Label layoutX="165.0" layoutY="380.0" text="CONSTRUCTION TYPE"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 9px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <RadioButton layoutX="165.0" layoutY="398.0" mnemonicParsing="false" text="Plot"
+                   style="-fx-text-fill: #2d3748; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px;">
+         <toggleGroup><ToggleGroup fx:id="constype" /></toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="252.0" layoutY="398.0" mnemonicParsing="false" text="Constructed" toggleGroup="$constype"
+                   style="-fx-text-fill: #2d3748; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px;"/>
+
+      <!-- Financial Section -->
+      <Label layoutX="165.0" layoutY="436.0" text="Financial &amp; Other Info"
+             style="-fx-text-fill: #0d9e5c; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Rectangle layoutX="342.0" layoutY="448.0" width="462.0" height="2" fill="#0d9e5c30" />
+
+      <Label layoutX="165.0" layoutY="458.0" text="Approved By"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <ComboBox fx:id="approvedby" layoutX="165.0" layoutY="474.0" onAction="#onapprovedby"
+                prefHeight="36.0" prefWidth="135.0"
+                style="-fx-background-color: #f5f8ff; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8;"/>
+
+      <Label layoutX="316.0" layoutY="458.0" text="Total Price Demand"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txttotalprice" layoutX="316.0" layoutY="474.0" prefHeight="36.0" prefWidth="140.0"
+                 promptText="&#8377; Amount"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <Label layoutX="472.0" layoutY="458.0" text="Other Info"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtotherinfo" layoutX="472.0" layoutY="474.0" prefHeight="36.0" prefWidth="130.0"
+                 promptText="Notes"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Bottom accent bar -->
+      <Rectangle layoutX="0" layoutY="585" width="820" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+   </children>
+</AnchorPane>

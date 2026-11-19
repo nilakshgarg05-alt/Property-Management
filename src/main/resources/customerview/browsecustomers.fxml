@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="448.0" prefWidth="660.0"
+            style="-fx-background-color: #f4f7ff;"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="customer.customerctableontroller">
+   <children>
+
+      <!-- Top accent bar -->
+      <Rectangle layoutX="0" layoutY="0" width="660" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+      <!-- White header panel -->
+      <Rectangle layoutX="0" layoutY="5" width="660" height="52"
+                 fill="#ffffff" />
+      <Rectangle layoutX="0" layoutY="56" width="660" height="2"
+                 fill="linear-gradient(to bottom, #d0ddf5, transparent)" />
+      <!-- Logo in navbar -->
+      <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="12.0" layoutY="13.0" preserveRatio="true">
+         <image><Image url="@../customer/logo.png" /></image>
+      </ImageView>
+      <Label layoutX="56.0" layoutY="13.0" text="Shree Bala Ji"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 14px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Label layoutX="56.0" layoutY="33.0" text="Property Management"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 9px; -fx-font-family: 'Segoe UI';"/>
+
+      <Label layoutX="225.0" layoutY="14.0" text="&#128101;  Customer Directory"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+
+      <!-- Filter Card -->
+      <Rectangle layoutX="14.0" layoutY="66.0" width="632.0" height="62.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+      <Rectangle layoutX="14.0" layoutY="66.0" width="632.0" height="4" arcWidth="12" arcHeight="12"
+                 fill="#8e44ad" />
+
+      <Label layoutX="28.0" layoutY="78.0" text="CUSTOMER CATEGORY"
+             style="-fx-text-fill: #8e44ad; -fx-font-size: 9px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <ComboBox fx:id="customercat" layoutX="28.0" layoutY="93.0" prefWidth="185.0" prefHeight="34.0"
+                style="-fx-background-color: #f5f8ff; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8;"/>
+      <Button layoutX="232.0" layoutY="93.0" mnemonicParsing="false" onAction="#onfetch"
+              text="&#128203;  Show Data" prefHeight="34.0" prefWidth="130.0"
+              style="-fx-background-color: #1a6dd4; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-family: 'Segoe UI'; -fx-background-radius: 8; -fx-cursor: hand; -fx-font-weight: bold;"/>
+
+      <!-- Results label -->
+      <Label layoutX="14.0" layoutY="140.0" text="Customer Records"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+
+      <!-- Table -->
+      <TableView fx:id="tabletrainees" layoutX="14.0" layoutY="160.0" prefHeight="224.0" prefWidth="632.0"
+                 style="-fx-background-color: #ffffff; -fx-border-color: #d0ddf5; -fx-border-width: 1.5; -fx-border-radius: 10; -fx-table-cell-border-color: #e8edf5;"/>
+
+      <!-- Export buttons -->
+      <Rectangle layoutX="14.0" layoutY="395.0" width="632.0" height="2" fill="#e0e8f5" />
+
+      <Button layoutX="156.0" layoutY="406.0" mnemonicParsing="false" onAction="#onexport"
+              text="&#128202;  Export to Excel" prefHeight="36.0" prefWidth="162.0"
+              style="-fx-background-color: #0d9e5c; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 9; -fx-cursor: hand;"/>
+      <Button layoutX="356.0" layoutY="406.0" mnemonicParsing="false" onAction="#onpdf"
+              text="&#128196;  Generate PDF" prefHeight="36.0" prefWidth="162.0"
+              style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 9; -fx-cursor: hand;"/>
+
+      <!-- Bottom accent bar -->
+      <Rectangle layoutX="0" layoutY="443" width="660" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+   </children>
+</AnchorPane>

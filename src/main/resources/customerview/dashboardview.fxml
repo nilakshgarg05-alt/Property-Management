@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="470.0" prefWidth="760.0"
+            style="-fx-background-color: linear-gradient(to bottom, #f4f7ff, #edf1fb);"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="customer.dashboard">
+   <children>
+
+      <!-- Top blue accent bar -->
+      <Rectangle layoutX="0" layoutY="0" width="760" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+      <!-- Top Navigation Bar -->
+      <Rectangle layoutX="0" layoutY="5" width="760" height="58"
+                 fill="#ffffff" />
+      <!-- Nav shadow -->
+      <Rectangle layoutX="0" layoutY="62" width="760" height="2"
+                 fill="linear-gradient(to bottom, #d0ddf5, transparent)" />
+
+      <!-- Logo in navbar -->
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="14.0" layoutY="12.0" preserveRatio="true">
+         <image><Image url="@../customer/logo.png" /></image>
+      </ImageView>
+      <Label layoutX="60.0" layoutY="14.0" text="Shree Bala Ji"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 16px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Label layoutX="60.0" layoutY="36.0" text="Property Management"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI';"/>
+
+      <!-- Navbar title center -->
+      <Label layoutX="290.0" layoutY="22.0" text="&#127968;  Admin Dashboard"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 18px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+
+      <!-- Log Out button in navbar -->
+      <Button layoutX="660.0" layoutY="17.0" mnemonicParsing="false" onAction="#dologout" text="Log Out"
+              prefHeight="30.0" prefWidth="84.0"
+              style="-fx-background-color: #fff0f0; -fx-text-fill: #c0392b; -fx-font-size: 11px; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand; -fx-font-weight: bold; -fx-border-color: #f0c0c0; -fx-border-width: 1; -fx-border-radius: 7;"/>
+
+      <!-- Section header -->
+      <Label layoutX="24.0" layoutY="78.0" text="Quick Access"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Rectangle layoutX="24.0" layoutY="96.0" width="712.0" height="1" fill="#dde5f5" />
+
+      <!-- ===== ROW 1 CARDS ===== -->
+
+      <!-- Card 1: Customer Management -->
+      <Rectangle layoutX="20.0" layoutY="105.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="20.0" layoutY="105.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#1a6dd4" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="52.0" layoutY="118.0" preserveRatio="true">
+         <image><Image url="@../customer/customermanage.png" /></image>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="192.0" text="Customer Mgmt"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="28.0" layoutY="214.0" mnemonicParsing="false" onAction="#docustomermanage"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #1a6dd4; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- Card 2: Property Management -->
+      <Rectangle layoutX="200.0" layoutY="105.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="200.0" layoutY="105.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#0d9e5c" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="232.0" layoutY="118.0" preserveRatio="true">
+         <image><Image url="@../customer/propertymanage.png" /></image>
+      </ImageView>
+      <Label layoutX="208.0" layoutY="192.0" text="Property Mgmt"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="208.0" layoutY="214.0" mnemonicParsing="false" onAction="#dopropertymanage"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #0d9e5c; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- Card 3: Deal Management -->
+      <Rectangle layoutX="380.0" layoutY="105.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="380.0" layoutY="105.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#e67e22" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="412.0" layoutY="118.0" preserveRatio="true">
+         <image><Image url="@../customer/dealmanage.png" /></image>
+      </ImageView>
+      <Label layoutX="388.0" layoutY="192.0" text="Deal Management"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="388.0" layoutY="214.0" mnemonicParsing="false" onAction="#dodealmanage"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- Card 4: Customer Directory -->
+      <Rectangle layoutX="560.0" layoutY="105.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="560.0" layoutY="105.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#8e44ad" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="592.0" layoutY="118.0" preserveRatio="true">
+         <image><Image url="@../customer/customerdirectory.png" /></image>
+      </ImageView>
+      <Label layoutX="568.0" layoutY="192.0" text="Customer Directory"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="568.0" layoutY="214.0" mnemonicParsing="false" onAction="#docustomerdir"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #8e44ad; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- ===== ROW 2 CARDS ===== -->
+
+      <!-- Card 5: Deal Explorer -->
+      <Rectangle layoutX="20.0" layoutY="278.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="20.0" layoutY="278.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#c0392b" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="52.0" layoutY="290.0" preserveRatio="true">
+         <image><Image url="@../customer/dealexplorar.png" /></image>
+      </ImageView>
+      <Label layoutX="28.0" layoutY="363.0" text="Deal Explorer"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="28.0" layoutY="385.0" mnemonicParsing="false" onAction="#dodealexp"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- Card 6: Property Catalog -->
+      <Rectangle layoutX="200.0" layoutY="278.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="200.0" layoutY="278.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#16a085" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="232.0" layoutY="290.0" preserveRatio="true">
+         <image><Image url="@../customer/propertycatalog.png" /></image>
+      </ImageView>
+      <Label layoutX="208.0" layoutY="363.0" text="Property Catalog"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="208.0" layoutY="385.0" mnemonicParsing="false" onAction="#dopropcatalog"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #16a085; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- Card 7: Sales Statistics -->
+      <Rectangle layoutX="380.0" layoutY="278.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="380.0" layoutY="278.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#2980b9" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="412.0" layoutY="290.0" preserveRatio="true">
+         <image><Image url="@../customer/salesstats.png" /></image>
+      </ImageView>
+      <Label layoutX="388.0" layoutY="363.0" text="Sales Statistics"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="388.0" layoutY="385.0" mnemonicParsing="false" onAction="#dosalesstats"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- Customer Insights -->
+      <Rectangle layoutX="560.0" layoutY="278.0" width="160.0" height="155.0" arcWidth="14" arcHeight="14"
+                 fill="#ffffff" />
+      <Rectangle layoutX="560.0" layoutY="278.0" width="160.0" height="5" arcWidth="14" arcHeight="14"
+                 fill="#d35400" />
+      <ImageView fitHeight="65.0" fitWidth="75.0" layoutX="592.0" layoutY="290.0" preserveRatio="true">
+         <image><Image url="@../customer/customerinsights.png" /></image>
+      </ImageView>
+      <Label layoutX="568.0" layoutY="363.0" text="Customer Insights"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 10px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';" prefWidth="144"/>
+      <Button layoutX="568.0" layoutY="385.0" mnemonicParsing="false" onAction="#docustomerinsights"
+              text="Open  &#8594;" prefWidth="144.0" prefHeight="28.0"
+              style="-fx-background-color: #d35400; -fx-text-fill: white; -fx-font-size: 11px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 7; -fx-cursor: hand;"/>
+
+      <!-- Bottom accent bar -->
+      <Rectangle layoutX="0" layoutY="465" width="760" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+   </children>
+</AnchorPane>

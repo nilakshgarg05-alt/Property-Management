@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="402.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="chkrad.chkradcontroller">
+   <children>
+      <CheckBox fx:id="chkall" layoutX="175.0" layoutY="64.0" mnemonicParsing="false" onAction="#dochkall" text="order all" />
+      <CheckBox fx:id="chkp" layoutX="202.0" layoutY="131.0" mnemonicParsing="false" text="pizza-100" />
+      <CheckBox fx:id="chkb" layoutX="192.0" layoutY="171.0" mnemonicParsing="false" text="burger-50" />
+      <Button fx:id="btnselected" layoutX="176.0" layoutY="201.0" mnemonicParsing="false" onAction="#doselected" text="show selected" />
+      <Label fx:id="lblitems" layoutX="198.0" layoutY="235.0" text="Label" />
+      <Label fx:id="lblbill" layoutX="276.0" layoutY="205.0" text="Label" />
+      <Label layoutX="89.0" layoutY="270.0" text="offer" />
+       <RadioButton fx:id="rad10" layoutX="199.0" layoutY="261.0" text="10%">
+         <toggleGroup>
+            <ToggleGroup fx:id="offer" />
+         </toggleGroup></RadioButton>
+       <RadioButton fx:id="rad20" layoutX="325.0" layoutY="270.0" prefHeight="0.0" prefWidth="45.0" text="20%" toggleGroup="$offer" />
+       <Button fx:id="btnoffer" layoutX="223.0" layoutY="309.0" mnemonicParsing="false" onAction="#dooffer" text="net amount" />
+   </children>
+</AnchorPane>

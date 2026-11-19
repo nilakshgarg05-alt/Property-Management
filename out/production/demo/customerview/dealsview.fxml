@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="660.0" prefWidth="700.0"
+            style="-fx-background-color: #f4f7ff;"
+            xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="customer.finalizedealcontroller">
+   <children>
+
+      <!-- Top accent bar -->
+      <Rectangle layoutX="0" layoutY="0" width="700" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+      <!-- White header panel -->
+      <Rectangle layoutX="0" layoutY="5" width="700" height="58"
+                 fill="#ffffff" />
+      <Rectangle layoutX="0" layoutY="62" width="700" height="2"
+                 fill="linear-gradient(to bottom, #d0ddf5, transparent)" />
+      <!-- Logo in navbar -->
+      <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="12.0" layoutY="12.0" preserveRatio="true">
+         <image><Image url="@../customer/logo.png" /></image>
+      </ImageView>
+      <Label layoutX="58.0" layoutY="14.0" text="Shree Bala Ji"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 14px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Label layoutX="58.0" layoutY="35.0" text="Property Management"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 9px; -fx-font-family: 'Segoe UI';"/>
+
+      <Label layoutX="258.0" layoutY="18.0" text="&#129309;  Finalize Deal"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 20px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+
+      <!-- Property ID Search Card -->
+      <Rectangle layoutX="14.0" layoutY="72.0" width="672.0" height="56.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+      <Label layoutX="28.0" layoutY="83.0" text="PROPERTY ID"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 9px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="tcxtid" layoutX="118.0" layoutY="82.0" prefHeight="36.0" prefWidth="185.0"
+                 promptText="Enter Property ID"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+      <Button fx:id="btnfetch" layoutX="318.0" layoutY="82.0" mnemonicParsing="false" onAction="#onfetch"
+              text="&#128269;  Fetch Details" prefHeight="36.0" prefWidth="155.0"
+              style="-fx-background-color: #1a6dd4; -fx-text-fill: white; -fx-font-size: 12px; -fx-font-family: 'Segoe UI'; -fx-background-radius: 8; -fx-cursor: hand; -fx-font-weight: bold;"/>
+
+      <!-- Parties Section -->
+      <Label layoutX="20.0" layoutY="144.0" text="Parties Involved"
+             style="-fx-text-fill: #1a6dd4; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Rectangle layoutX="182.0" layoutY="156.0" width="502.0" height="2" fill="#1a6dd430" />
+
+      <!-- Parties Card -->
+      <Rectangle layoutX="14.0" layoutY="163.0" width="672.0" height="130.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+
+      <!-- Seller -->
+      <Label layoutX="28.0" layoutY="175.0" text="Seller Name"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtsellername" layoutX="28.0" layoutY="191.0" prefHeight="36.0" prefWidth="260.0"
+                 promptText="Seller full name"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Buyer -->
+      <Label layoutX="360.0" layoutY="175.0" text="Buyer Name"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtbuyername" layoutX="360.0" layoutY="191.0" prefHeight="36.0" prefWidth="260.0"
+                 promptText="Buyer full name"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Seller Contact -->
+      <Label layoutX="28.0" layoutY="242.0" text="Seller Contact"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtsellercontact" layoutX="28.0" layoutY="258.0" prefHeight="36.0" prefWidth="260.0"
+                 promptText="Seller phone number"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Buyer Contact -->
+      <Label layoutX="360.0" layoutY="242.0" text="Buyer Contact"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtbuyercontact" layoutX="360.0" layoutY="258.0" prefHeight="36.0" prefWidth="260.0"
+                 promptText="Buyer phone number"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Financial Section -->
+      <Label layoutX="20.0" layoutY="314.0" text="Financial Details"
+             style="-fx-text-fill: #0d9e5c; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <Rectangle layoutX="178.0" layoutY="326.0" width="506.0" height="2" fill="#0d9e5c30" />
+
+      <!-- Financial Card -->
+      <Rectangle layoutX="14.0" layoutY="333.0" width="672.0" height="195.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+      <Rectangle layoutX="14.0" layoutY="333.0" width="672.0" height="4" arcWidth="12" arcHeight="12"
+                 fill="#0d9e5c" />
+
+      <!-- Final Amount -->
+      <Label layoutX="28.0" layoutY="348.0" text="Final Amount (&#8377;)"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtfinalamt" layoutX="28.0" layoutY="364.0" prefHeight="36.0" prefWidth="185.0"
+                 promptText="&#8377; 0.00"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Down Payment -->
+      <Label layoutX="232.0" layoutY="348.0" text="Down Payment (&#8377;)"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtdownpay" layoutX="232.0" layoutY="364.0" prefHeight="36.0" prefWidth="185.0"
+                 promptText="&#8377; 0.00"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Date of Deal -->
+      <Label layoutX="440.0" layoutY="348.0" text="Date of Deal"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <DatePicker fx:id="dateofdeal" layoutX="440.0" layoutY="364.0" prefHeight="36.0" prefWidth="224.0"
+                  style="-fx-background-color: #f5f8ff; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8;"/>
+
+      <!-- Total Commission -->
+      <Label layoutX="28.0" layoutY="418.0" text="Total Commission (&#8377;)"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txttotalcomm" layoutX="28.0" layoutY="434.0" prefHeight="36.0" prefWidth="185.0"
+                 promptText="&#8377; 0.00"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Advance Received -->
+      <Label layoutX="232.0" layoutY="418.0" text="Advance Received (&#8377;)"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtadvrec" layoutX="232.0" layoutY="434.0" prefHeight="36.0" prefWidth="185.0"
+                 promptText="&#8377; 0.00"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Registry Date -->
+      <Label layoutX="440.0" layoutY="418.0" text="Registry Date"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <DatePicker fx:id="registrydate" layoutX="440.0" layoutY="434.0" prefHeight="36.0" prefWidth="224.0"
+                  style="-fx-background-color: #f5f8ff; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8;"/>
+
+      <!-- Balance -->
+      <Label layoutX="28.0" layoutY="484.0" text="Balance (&#8377;)"
+             style="-fx-text-fill: #6b7a99; -fx-font-size: 10px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold;"/>
+      <TextField fx:id="txtbal" layoutX="28.0" layoutY="500.0" prefHeight="36.0" prefWidth="185.0"
+                 promptText="&#8377; 0.00"
+                 style="-fx-background-color: #f5f8ff; -fx-text-fill: #2d3748; -fx-border-color: #d0dff5; -fx-border-width: 1.5; -fx-border-radius: 8; -fx-background-radius: 8; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-prompt-text-fill: #b0bec5;"/>
+
+      <!-- Deal Status -->
+      <Label layoutX="250.0" layoutY="484.0" text="Deal Status:"
+             style="-fx-text-fill: #1a3a6e; -fx-font-size: 12px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+      <RadioButton layoutX="250.0" layoutY="504.0" mnemonicParsing="false" text="Ongoing"
+                   style="-fx-text-fill: #e67e22; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-font-weight: bold;">
+         <toggleGroup><ToggleGroup fx:id="dealstatus" /></toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="350.0" layoutY="504.0" mnemonicParsing="false" text="Completed" toggleGroup="$dealstatus"
+                   style="-fx-text-fill: #0d9e5c; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-font-weight: bold;"/>
+      <RadioButton layoutX="465.0" layoutY="504.0" mnemonicParsing="false" text="Cancelled" toggleGroup="$dealstatus"
+                   style="-fx-text-fill: #c0392b; -fx-font-family: 'Segoe UI'; -fx-font-size: 12px; -fx-font-weight: bold;"/>
+
+      <!-- Action Buttons -->
+      <Rectangle layoutX="14.0" layoutY="546.0" width="672.0" height="2" fill="#e0e8f5" />
+
+      <Rectangle layoutX="14.0" layoutY="556.0" width="672.0" height="62.0" arcWidth="12" arcHeight="12"
+                 fill="#ffffff" />
+
+      <Button fx:id="btnsave" layoutX="186.0" layoutY="570.0" mnemonicParsing="false" onAction="#onsave"
+              text="&#128190;  Save Deal" prefHeight="42.0" prefWidth="152.0"
+              style="-fx-background-color: #0d9e5c; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 10; -fx-cursor: hand;"/>
+      <Button fx:id="btnmodify" layoutX="366.0" layoutY="570.0" mnemonicParsing="false" onAction="#onmodify"
+              text="&#9999;  Modify Deal" prefHeight="42.0" prefWidth="152.0"
+              style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 13px; -fx-font-weight: bold; -fx-font-family: 'Segoe UI'; -fx-background-radius: 10; -fx-cursor: hand;"/>
+
+      <!-- Bottom accent bar -->
+      <Rectangle layoutX="0" layoutY="655" width="700" height="5"
+                 fill="linear-gradient(to right, #1a6dd4, #4a9eff, #1a6dd4)" />
+
+   </children>
+</AnchorPane>

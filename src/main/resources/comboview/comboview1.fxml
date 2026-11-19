@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="listcombo.listcombo">
+   <children>
+      <Button fx:id="btnshowsel" layoutX="323.0" layoutY="127.0" mnemonicParsing="false" onAction="#doshowsel" text="show selected" />
+      <Label layoutX="142.0" layoutY="48.0" text="Label" />
+      <ListView fx:id="lstitems" layoutX="27.0" layoutY="161.0" onMouseClicked="#dodelondoubleclick" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="btnclear" layoutX="310.0" layoutY="200.0" mnemonicParsing="false" onAction="#doclearallitems" text="clear all" />
+      <Button fx:id="btnshowallsel" layoutX="316.0" layoutY="261.0" mnemonicParsing="false" onAction="#doshowallsel" text="show all selected" />
+      <Button fx:id="btnaddinput" layoutX="323.0" layoutY="308.0" mnemonicParsing="false" onAction="#doaddinput" text="add items" />
+      <ComboBox fx:id="comboitems" layoutX="188.0" layoutY="44.0" onAction="#doaddincart" prefWidth="150.0" />
+   </children>
+</AnchorPane>
